@@ -1,38 +1,285 @@
-.App {
+body{
+  background-color:#68A69B;
+}
+
+.blue-nav{
+  background-color: #053259;
+}
+
+.nav-link {
+  color:white;
+  font-weight:bold;
+}
+
+.nav-link:hover {
+  color:#ff6726;
+}
+
+.nav-link:visited {
+  color:white;
+}
+
+.brand-name{
+  font-family: 'Limelight', cursive;
+  text-shadow:
+  -0.5px -0.5px 0 #fff,  
+  0.5px -0.5px 0 #fff,
+   -0.5px 0.5px 0 #fff,
+   0.5px 0.5px 0 #fff;
+   font-size:30px;
+   color:#031326;
+}
+
+body{
+
+  background-color: #68A69B
+}
+.domain-search {
+  margin: 0;
+  padding:206px 0;
+}
+
+
+.bg-pblue {
+  background-color: #68A69B
+}
+
+.domain-search .form-title {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #fff;
+  font-family: Arial;
+  font-weight: 100;
+}
+
+.form-title{
+  font-size:36px;
+}
+
+.domain-search p {
+  color: #053259;
+  margin: 0;
+}
+
+.domain-search .input-group {
+  -webkit-box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.domain-search .input-group-addon {
+  border: none;
+}
+
+.domain-search .form-title strong {
+  display: block;
+}
+
+.domain-search .form-control {
+  height: 60px;
+  border-radius: 0;
+  border: none;
+}
+
+.domain-search .form-control:focus {
+
+box-shadow: 0px 0px 0px 0px #ffffff !important;
+
+}
+
+.input-group .input-group-addon [type="submit"], .input-group .input-group-addon button {
+  border: none;
+  border-radius: 0;
+}
+
+.domain-search .btn {
+  padding: 0 54px;
+  line-height: 60px;
+}
+
+
+.btn-primary, .orange-btn{
+  padding: 0 28px;
+  line-height: 54px;
+  background: #ff6726;
+  color: #fff;
+  border-radius:0;
+  border:#A3451C;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #A3451C;
+
+}
+
+.domain-search .input-group + p {
+  color: #fff;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.domain-search .input-group + p strong {
+  margin-right: 40px;
+}
+
+.footer-basic {
+  padding:40px 0;
+  background-color:#2F6C73;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color: #053259;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #053259;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#053259;
+  margin-bottom:0;
+}
+
+.icon{
+  color:#053259;
+}
+
+.movie-poster{
+  border-radius:0;
+}
+
+.hero{
+  position:relative;
+
+  
+&::before{
+  content: ' ';
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background-size:cover;
+  background-position:center;
+  opacity:0.25;
+}
+}
+
+.releases-header{
+  color:white;
+  font-family: Arial;
+  font-size:40px;
+}
+
+.movie-card{
+  -webkit-box-shadow: 10px 35px 36px -7px rgba(47,108,115,1);
+-moz-box-shadow: 10px 35px 36px -7px rgba(47,108,115,1);
+box-shadow: 10px 35px 36px -7px rgba(47,108,115,1);
+}
+
+.movie-plot{
+  font-size:9pt;
+}
+
+.movie-year{
+  font-size:16pt;
+  font-weight:bold;
+}
+
+.card-title{
+  font-family: 'Limelight', cursive;
+  font-size:20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.review-btn{
+  border: none;
   color: white;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  background: #ff6726;
+  border:#A3451C;
+  font-size:14px;
 }
 
-.App-link {
-  color: #61dafb;
+.review-btn:hover{
+  background: #A3451C;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-poster-transparent{
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
 }
+
+.review-area{
+  width:100%;
+  border: none;
+}
+
+.white-bg{
+  background-color: white;
+}
+
+/*
+.hidden{
+  display:none;
+}*/
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display:block;
+}
+
+
