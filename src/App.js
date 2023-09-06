@@ -16,10 +16,10 @@ ReviewForm: a form at the bottom of a Movie component that allows users to leave
 
 import logo from './logo.svg';
 import './App.css';
-import Nav from './Nav';
-import Header from './Header';
-import Footer from './footer';
-import NewReleases from './NewReleases';
+import Nav from './components/Nav';
+import Header from './components/Header';
+import Footer from './components/footer';
+import NewReleases from './components/NewReleases';
 
 
 function App() {

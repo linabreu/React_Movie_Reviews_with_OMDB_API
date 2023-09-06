@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import TextArea from './TextArea';
 
 
 
@@ -24,18 +25,36 @@ hide = () =>
 sendReview(movieReview)
 {
     let endpoint = "https://64d99efce947d30a260a2ccb.mockapi.io/unit2/movieReviews";
-    //return $.post(endpoint, movieReview);
+    /*fetch(endpoint, 
+    {
+        method: 'POST',
+        body: JSON.stringify({movieReview}),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+         .then((response) => response.json())
+         .then((data) => {
+            console.log(data);
+            // Handle data
+         })
+         .catch((err) => {
+            console.log(err.message);
+         });*/
+         //console.log(movieReview);
 }
 
-createReview = (movieTitle) => {
+createReview = (movieTitle) => 
+{
    
-    let movieReview = document.getElementById(movieTitle).value;
+    //let movieReview = document.getElementById(movieTitle).value;
+    //console.log(movieReview)
     let movieReviewObj = 
     {
         movie: movieTitle,
-        review: movieReview
+        review: movieTitle
     }
-    this.sendReview(movieReviewObj);
+    //this.sendReview(movieReviewObj);
 }
 
 
@@ -68,7 +87,7 @@ render() {return (
             <div className = "row">
                 <div className = "col-4"></div>
                 <div className = "col-4">
-                    <button className="review-btn mb-2" onClick={this.postReview}>Submit Review</button>
+                    <button className="review-btn mb-2" onClick={this.createReview(`${this.data.Title}`)}>Submit Review</button>
                 </div>
                 <div className = "col-4"></div>
             </div>
