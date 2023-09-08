@@ -26,13 +26,11 @@ body{
   font-weight:bold;
 }
 
-.nav-link:hover, nav-item:hover {
+.nav-link:hover {
   color:#ff6726;
 }
 
-.nav-link:visited {
-  color:white;
-}
+
 
 .brand-name{
   font-family: 'Limelight', cursive;
@@ -295,6 +293,23 @@ box-shadow: 10px 35px 36px -7px rgba(47,108,115,1);
 
 .visible {
   display:block;
+}
+
+.red {
+  color:red;
+}
+
+.centered {
+  display:block;
+  margin:auto;
+}
+
+.negative {
+  margin-top: -150px;
+}
+
+.top-margin {
+  margin-top: 100px;
 }
 
 

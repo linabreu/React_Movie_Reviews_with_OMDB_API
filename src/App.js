@@ -20,15 +20,18 @@ import Nav from './components/Nav';
 import Header from './components/Header';
 import Footer from './components/footer';
 import NewReleases from './components/NewReleases';
-
+import Test from './components/test';
+import Movie from './components/Movie';
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
-      <Header/>
-      <NewReleases/>
-      <Footer/>
+
+  <Nav/>
+  <Header/>
+  <NewReleases/>
+  <Footer/>
+
     </div>
   );
 }

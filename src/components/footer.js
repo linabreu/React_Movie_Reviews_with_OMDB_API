@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 
-export default class Footer extends Component {
-    render() {return (
+
+//functional component bc just for UI display
+export default function Footer() {
+return (
         <div className="footer-basic row">
             <div className = "col-sm-3"></div>
             <div className = "col-sm-6">
@@ -17,4 +19,3 @@ export default class Footer extends Component {
             <div className = "col-sm-3"></div>
     </div>
     );}
-}

@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import Movie from './Movies';
+import Movie from './Movie';
 
 let newReleases = [
   {
     Title: "Haunted\nMansion",
     Year: "2023",
-    Poster: "https://m.media-amazon.com/images/M/MV5BOWNkNzNlYWItNjIwOC00NzNlLTkxY2MtOWQyMTdmYTAzNGY5XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNTlmZmFkYTEtMDM4NS00NTgzLWFhODEtZjMxOTlmN2QxZTdiXkEyXkFqcGdeQXVyMTMzOTQyOTk1._V1_SX300.jpg",
     Plot: "A single mom hires a tour guide, a psychic, a priest and a historian to help exorcise her new mansion after discovering it is inhabited by ghosts."
   },
   {
@@ -24,13 +24,12 @@ let newReleases = [
 
 export default class NewReleases extends Component {
 render() {return (
-<div className="container px-2">
+<div className="container px-2 top-margin">
   <h2 className="releases-header">Popular New Releases to Review</h2>
   <div className="row  mb-5">
-    <Movie data={newReleases[0]}/>
-    <Movie data={newReleases[1]}/>
-    <Movie data={newReleases[2]}/>
+      <Movie searchData={newReleases[0]}/>
+      <Movie searchData={newReleases[1]}/>
+      <Movie searchData={newReleases[2]}/>   
   </div>
 </div>);}
 }
-

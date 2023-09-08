@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import TextArea from './TextArea';
+import Rating from '@mui/material/Rating';
 
 
-
-export default class Movie extends Component {
+export default class Moviess extends Component {
 constructor (props) 
 {
     super(props);
@@ -87,6 +86,7 @@ render() {return (
             <div className = "row">
                 <div className = "col-4"></div>
                 <div className = "col-4">
+                <Rating/>
                     <button className="review-btn mb-2" onClick={this.createReview(`${this.data.Title}`)}>Submit Review</button>
                 </div>
                 <div className = "col-4"></div>

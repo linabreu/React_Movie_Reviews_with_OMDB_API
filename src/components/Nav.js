@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 
-export default class Nav extends Component {
-    render() {return (
+//this can be a functional component bc it's just for UI display
+export default function Nav(){
+  return(
     <nav className="navbar navbar-expand-lg blue-nav">
       <a className="navbar-brand brand-name" href="#">MovieSmith</a>
 
@@ -12,4 +13,3 @@ export default class Nav extends Component {
         </div>
     </nav>
     );}
-}
