@@ -39,7 +39,7 @@ export default function AllReviews() {
                 <p className="movie-plot text-center p-2">{review.Review}</p>
               </div>
               <div className = "btn-container">
-                  <button className="review-btn centered" onClick = {() => deleteReview(index) }>Delete</button>
+                  <button className="review-btn centered" onClick = {() => deleteReview(review.id) }>Delete</button>
               </div>
             </div>
           </div>))}
