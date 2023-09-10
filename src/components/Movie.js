@@ -5,10 +5,25 @@ import {useState, useEffect} from 'react'
 
 export default function Movie(searchData) 
 {
+    const API_URL = 'https://64d99efce947d30a260a2ccb.mockapi.io/unit2/movieReviews';
 
-    console.log('here')
+
+    const [newReview, setNewReview] = useState("");
+    const [title, setTitle] = useState(searchData.searchData.Title);
     const [currentClass, setCurrentClass] = useState("hidden")
+    
 
+    const createReview = () => {
+      fetch(API_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          Title: title,
+          Review: newReview
+        })
+      })
+    }  
+    
 //going to return a single card that is the search result
 return (
         <div className="col-lg-4 mb-2">
@@ -35,12 +50,12 @@ return (
             </div>
             <div className = {currentClass}>
                 <div className="white-bg movie-card mt-2">
-                    <textarea className = "review-area p-3" name="review" rows="5" cols="50" placeholder= "Type you review here"></textarea>
+                <textarea onChange = {(e)=> setNewReview(e.target.value)} onClick ={(() =>setTitle(`${searchData.searchData.Title}`))} className = "review-area p-3" name="review" rows="5" cols="50" placeholder= "Type you review here"></textarea>
                     <div className = "row">
                         <div className = "col-4"></div>
                         <div className = "col-4">
                         <Rating/>
-                            <button className="review-btn mb-2">Submit Review</button>
+                            <button className="review-btn mb-2" onClick = {createReview}>Submit Review</button>
                         </div>
                         <div className = "col-4"></div>
                     </div>

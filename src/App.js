@@ -20,8 +20,9 @@ import Nav from './components/Nav';
 import Header from './components/Header';
 import Footer from './components/footer';
 import NewReleases from './components/NewReleases';
-import Test from './components/test';
-import Movie from './components/Movie';
+import ReviewCard from './components/AllReviews';
+import SeeAllReviewsBtn from './components/AllReviews';
+
 
 function App() {
   return (

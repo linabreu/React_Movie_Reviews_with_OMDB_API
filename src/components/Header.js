@@ -1,12 +1,13 @@
 import {useState, useEffect} from 'react'
-import NewReleases from './NewReleases'
 import Movie from './Movie'
+import AllReviews from './AllReviews'
 
 export default function Header() {
 
   const [searchResult, setSearchResult] = useState([])
   const [searchInputValue, setSearchInputValue] = useState("The Godfather")
   const [currentClass, setCurrentClass] = useState("hidden")
+  const [active, setActive] = useState("hidden")
 
   useEffect(() => {
     fetch(`http://www.omdbapi.com/?t=${searchInputValue}&apikey=cd01d28f&plot=short`)
@@ -31,25 +32,28 @@ export default function Header() {
                     <div className="col-sm-1"></div>
                         <div className="col-sm-3">
                             <h2 className="form-title"><strong>Unlock Your Inner Critic</strong></h2>
-                            <p><strong>Search Any Movie to Get Started</strong></p>
+                            <p><strong>Search Any Movie to Get Started OR</strong></p>
+                            <button className = 'review-btn mt-3 mb-3' onClick = {() => setActive("visible")} onDoubleClick = {() => setActive("hidden")}>See All Reviews</button>
                         </div>
                         <div className="col-sm-7">
                             <div className="input-group">
                                 <input onChange={(e) => setSearchInputValue(e.target.value)} type="search" className="form-control movie-card" id ="search-bar" placeholder='Try "The Godfather"'/>
-                                <span className="input-group-addon"><button onClick = {() => setCurrentClass("visible") } className="btn btn-primary orange-btn movie-card " id = "search-btn">Search</button></span>
+                                <span className="input-group-addon"><button onClick = {() => setCurrentClass("visible")} className="btn btn-primary orange-btn movie-card " id = "search-btn">Search</button></span>
                             </div>
                         </div>
                     <div className="col-sm-1"></div>
                 </div>
             </div>
         </form>
+        
         <div className = {currentClass}>
-          <div className = "row mb-5 negative px-2">
+          <div className = "row mb-5 negative  px-2">
           <h2 className="releases-header text-center mb-2">Ready to Review</h2>
             <div className = "col"></div>
                 <Movie searchData = {searchResult}/>
             <div className = "col"></div>
           </div>
+          {active === "visible" && <AllReviews/>}
         </div>
     </div>
 );}

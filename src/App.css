@@ -17,6 +17,10 @@ body{
   background-color:#68A69B;
 }
 
+.isGreen {
+  background-color:#68A69B;
+}
+
 .blue-nav{
   background-color: #053259;
 }
@@ -310,6 +314,27 @@ box-shadow: 10px 35px 36px -7px rgba(47,108,115,1);
 
 .top-margin {
   margin-top: 100px;
+}
+
+.review-body{
+  height:100px;
+}
+
+.top-margin{
+  margin-top:20px;
+}
+
+.top-space {
+  margin-top:50px;
+}
+
+.centered {
+  display:block;
+  margin:auto;
+}
+
+.btn-container {
+  height:50px;
 }
 
 
